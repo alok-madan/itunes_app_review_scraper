@@ -5,20 +5,15 @@ install.packages("highcharter") # graphing
 install.packages("dplyr") #table binding
 install.packages("lubridate") # time series plotting
 install.packages("sentimentr") # sentiment analysis
-install.packages("tm")  # for text mining
-install.packages("SnowballC") # for text stemming
 install.packages("RColorBrewer") # color palettes
 #Load
-library(itunesr)
-library(plyr)
-library(highcharter)
-library(lubridate)
-library(highcharter)
-library(dplyr)
-library(lubridate)
-library(sentimentr)
-library("tm")
-library("SnowballC")
+library("itunesr")
+library("plyr")
+library("highcharter")
+library("lubridate")
+library("highcharter")
+library("dplyr")
+library("sentimentr")
 library("wordcloud")
 library("RColorBrewer")
 
@@ -43,16 +38,6 @@ dt <- dt %>% select(Date,Rating) %>% group_by(Date) %>% summarise(Rating = round
 #graph ratings over time 
 highchart() %>%   hc_add_series_times_values(dt$Date,dt$Rating, name = 'Average Rating')
 
-###Sentiment Analysis### 
-
-# Column with only reviews
-reviews_only <- as.character(reviews$Review)
-#sentimentr table
-sentiment_scores <- reviews_only %>% sentiment_by(by=Date)
-#Graph Sentiment over time
-highchart() %>% hc_xAxis(sentiment_scores$element_id) %>% hc_add_series(sentiment_scores$ave_sentiment, name = 'Reviews Sentiment Scores')
-
-highchart() %>%   hc_add_series_times_values(dt$Date,sentiment_scores$ave_sentiment, name = 'Average Rating')
 
 
 #Wordcloud
