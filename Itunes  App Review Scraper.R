@@ -4,7 +4,6 @@ install.packages("wordcloud") # for generating word clouds
 install.packages("highcharter") # graphing
 install.packages("dplyr") #table binding
 install.packages("lubridate") # time series plotting
-install.packages("sentimentr") # sentiment analysis
 install.packages("RColorBrewer") # color palettes
 #Load
 library("itunesr")
@@ -13,7 +12,6 @@ library("highcharter")
 library("lubridate")
 library("highcharter")
 library("dplyr")
-library("sentimentr")
 library("wordcloud")
 library("RColorBrewer")
 
