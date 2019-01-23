@@ -4,7 +4,7 @@ install.packages("wordcloud") # for generating word clouds
 install.packages("highcharter") # graphing
 install.packages("dplyr") #table binding
 install.packages("lubridate") # time series plotting
-install.packages("RColorBrewer") # color palettes
+install.packages("RColorBrewer") # Wordcloud color palettes
 #Load
 library("itunesr")
 library("plyr")
