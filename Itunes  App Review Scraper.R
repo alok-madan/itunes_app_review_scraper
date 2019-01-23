@@ -1,17 +1,11 @@
-#Install
-install.packages("itunesr") # for scraping reviews
-install.packages("wordcloud") # for generating word clouds
-install.packages("highcharter") # graphing
-install.packages("dplyr") #table binding
-install.packages("lubridate") # time series plotting
-install.packages("RColorBrewer") # Wordcloud color palettes
+
 #Load
 library("itunesr")
+library("dplyr")
 library("plyr")
 library("highcharter")
 library("lubridate")
-library("highcharter")
-library("dplyr")
+
 library("wordcloud")
 library("RColorBrewer")
 
